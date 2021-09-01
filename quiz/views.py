@@ -93,7 +93,7 @@ def register(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your registration was successful, you can Login Now !!')
-            return redirect('/quiz/login')
+            return redirect('/september/login')
 
     context = {'form': form, 'title': title}
     return render(request, 'quiz/registration.html', context=context)
