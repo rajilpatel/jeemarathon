@@ -24,7 +24,7 @@ from django.conf.urls import handler404, handler500
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("home.urls",namespace='home_view')),
-    url('september/', include('quiz.urls')),
+    url('september/', include('quiz.urls'),namespace='quiz'),
     url(r'^quiz2/', include('quiz_2.urls')),
 
  
