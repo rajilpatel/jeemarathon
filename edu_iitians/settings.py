@@ -13,9 +13,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 
-import mimetypes
-mimetypes.add_type("text/css", ".css", True)
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -152,5 +149,3 @@ LOGIN_URL = '/september/'
 LOGIN_REDIRECT_URL = 'september/'
 AUTH_USER_MODEL = 'quiz.User'
 
-import mimetypes
-mimetypes.add_type("text/css", ".css", True)
