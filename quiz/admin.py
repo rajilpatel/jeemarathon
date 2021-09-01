@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Question, Choice,AttemptedQuestion,User
+from .models import Question, Choice,AttemptedQuestion,User, QuizProfile
 from .forms import QuestionForm, ChoiceForm, ChoiceInlineFormset
 # Register your models here.
 
@@ -32,5 +32,6 @@ class QuestionAdmin(admin.ModelAdmin):
 
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(AttemptedQuestion)
+admin.site.register(QuizProfile)
 admin.site.register(User)
 
