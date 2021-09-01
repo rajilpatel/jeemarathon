@@ -1,0 +1,144 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<div class="htheme_content_holder">
+
+	<!-- SET HEADER IF ON IS NOT SELECTED -->
+	
+	<!-- ROW -->
+	<div class="htheme_row htheme_padding_bottom">
+		<div class="htheme_container">
+			<div class="htheme_inner_col">
+				<!-- TITLE DEFAULT -->
+				<div class="htheme_title_container" data-title-type="default">
+					{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+    {% endfor %}
+</ul>
+{% endif %}
+					<div class="htheme_title">
+						<h1>
+															Register													</h1>
+					</div>
+														</div>
+			</div>
+		</div>
+	</div>
+	<!-- ROW -->
+
+					<!-- ROW -->
+		<div class="htheme_row">
+			<div class="htheme_container">
+				<div class="htheme_inner_col">
+					<div class="woocommerce">
+	
+<form name="checkout" method="post" class="checkout woocommerce-checkout" action="." enctype="multipart/form-data" novalidate="novalidate">
+	{% csrf_token %}
+	
+		
+		<div class="col2-set" id="customer_details">
+			<div class="col-1">
+				<div class="woocommerce-billing-fields">
+	
+		<h3>Student details</h3>
+
+	
+	
+	<div class="woocommerce-billing-fields__field-wrapper">
+		<p class="form-row form-row-wide" id="billing_company_field" data-sort="30">
+			<label for="name" class="">Student's Name</label>
+			<input type="text" class="input-text " name="name" id="name" placeholder="" value="" autocomplete="organization"></p>
+	
+	<p class="form-row form-row-wide" id="billing_company_field" data-sort="30">
+		<label for="father_name" class="">Father's Name</label>
+		<input type="text" class="input-text " name="father_name" id="father_name" placeholder="" value="" autocomplete="organization"></p>
+	<p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce" id="billing_country_field" data-sort="40">
+    <label for="grade" class="">Class <abbr class="required" title="required">*</abbr></label>
+	<select name="grade" id="grade" class="country_to_state country_select select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+		<option value="" aria-hidden="true">Select Class</option>
+		<option value="10th">10th</option>
+		<option value="11th">11th</option><option value="AL">12th</option>
+		<option value="Drop Year">Drop Year</option></select>
+		
+		<noscript><input type="submit" name="woocommerce_checkout_update_totals" value="" />
+		</noscript>
+	</p>
+	<p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce" id="billing_country_field" data-sort="40">
+		<label for="course" class="">Course <abbr class="required" title="required">*</abbr></label>
+		<select name="course" id="course" class="country_to_state country_select select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+			<option value="" aria-hidden="true">Select Course</option>
+			<option value="Zoom Lectures">Zoom Lectures</option>
+			<option value="Test Series">Test Series</option><option value="Offline Support">Offline Support</option>
+			</select>
+			
+			<noscript><input type="submit" name="woocommerce_checkout_update_totals" value="Update country" />
+			</noscript>
+		</p>
+		<p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce" id="billing_country_field" data-sort="40">
+			<label for="city" class="">Town/City <abbr class="required" title="required">*</abbr></label>
+			<select name="city" id="city" class="country_to_state country_select select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+				<option value="" aria-hidden="true">Select City</option>
+				<option value="Palanpur">Palanpur</option>
+				<option value="Ajmer">Ajmer</option>
+				</select>
+				
+				<noscript><input type="submit" name="woocommerce_checkout_update_totals" value="Update country" />
+				</noscript>
+			</p>
+
+							<p class="form-row form-row-first validate-required validate-phone" id="billing_phone_field" data-sort="100">
+								<label for="phone" class="">Phone <abbr class="required" title="required">*</abbr></label>
+								<input type="tel" class="input-text " name="phone" id="phone" placeholder="" value="" autocomplete="tel"></p>
+							<p class="form-row form-row-last validate-required validate-email" id="billing_email_field" data-sort="110">
+								<label for="email" class="">Email address <abbr class="required" title="required">*</abbr></label>
+								<input type="email" class="input-text " name="email" id="email" placeholder="" value="" autocomplete="email username"></p>
+	</div>
+
+	</div>
+
+	
+			</div>
+
+			<div class="col-2">
+				<div class="woocommerce-shipping-fields">
+	</div>
+<div class="woocommerce-additional-fields">
+	
+	
+		
+			<h3>Additional information</h3>
+
+		
+		<div class="woocommerce-additional-fields__field-wrapper">
+							<p class="form-row notes" id="order_comments_field" data-sort=""><label for="order_comments" class="">Order notes</label><textarea name="order_comments" class="input-text " id="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2" cols="5"></textarea></p>					</div>
+
+	
+	</div>
+			</div>
+		</div>
+
+		
+			
+	
+			
+			
+			<input type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Submit" data-value="Submit">
+			
+			
+	
+	
+</form>
+
+</div>
+				</div>
+			</div>
+		</div>
+		<!-- ROW -->
+			    
+    <!-- COMMENTS -->
+	    <!-- COMMENTS -->
+
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %} EduIITians Scholarship Leaderboard {% endblock title %}
+{% block content %}
+{% if question is None %}
+
+<div class="container">
+  <div class="jumbotron my-4">
+    <h1> You have already answered all of our questions. </h1>
+    <a href="/" class="btn btn-lg btn-primary"><i class="fa fa-trophy" aria-hidden="true"></i> See Exercises and leaderboards here <i class="fa fa-trophy" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+{% else %}
+
+<div class="container">
+  <div class="jumbotron my-4">
+
+    <div class="" id="" style="background-image:url({{ question.image.url }}); background-color:#FFFFFF"></div>
+    <section class="gallery no-padding">    
+      <div class="row">
+        <div class="mix col-lg-16 col-md-12 col-sm-6">
+          <div class="item"><a href="#" data-fancybox="gallery" class="image"><img src="{{question.image.url}}" alt="..." class="img-fluid">
+              <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+        </div>
+      </section>
+    
+    <form class="form" action="" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="question_pk" value="{{ question.pk }}">
+        {% for choice in question.choices.all %}
+          <div class="form-check mx-4">
+            <input class="form-check-input" type="radio" name="choice_pk" id="choice-{{ forloop.counter }}" value="{{ choice.pk }}">
+            <label class="form-check-label" for="choice-{{ forloop.counter }}">
+              {{ choice.html|safe }}
+            </label>
+          </div>
+
+        {% endfor %}
+        <input class="btn btn-danger btn-lg mt-4" type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+{% endif %}
+
+{% endblock content %}

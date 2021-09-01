@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block title %} JEE Marathon Quiz | List {% endblock title %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center my-4"><span class="badge badge-primary"><i class="fa fa-trophy" aria-hidden="true"></i> Live JEE Marathons <i class="fa fa-trophy" aria-hidden="true"></i></span></h1>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Marathon Name</th>                            
+                <th>Leaderboard Link</th>
+                <th>Upadted On</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for exercise in exercises %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                
+                <td><a href="{{ exercise.exercise_link}}" class="href">{{ exercise.exercise_name }}</a></td>
+                <td><a href="{{ exercise.leaderboard_link }}" class="href">Leaderboard Link</a></td> 
+                <td>{{ exercise.updated_date }}</td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
+

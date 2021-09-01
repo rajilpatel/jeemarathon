@@ -1,0 +1,63 @@
+/********************************
+    ICONS
+*********************************/
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../icons.eot');
+    src:url('../icons.eot#iefix') format('embedded-opentype'),
+    url('../fonts/icons.ttf') format('truetype'),
+    url('../fonts/icons.woff') format('woff'),
+    url('../img/icons.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="htheme-icon-"],
+.htheme_instagram_mosaic_icon:after,
+.htheme_product_column_overlay:after,
+.htheme_superzoom_close:after,
+.htheme_instagram_likes:after,
+.htheme_instagram_comments:after,
+.htheme_burger_toggle:after,
+.htheme_fullscreen_button:after,
+.nav-previous:before,
+.htheme_hamburger_close:after,
+.htheme_field_error,
+.htheme_language:after,
+.nav-next:before,
+.htheme_popup_left,
+.htheme_preview_gal_btn,
+.htheme_popup_right,
+.widget_product_search input[type=submit],
+[class^="htheme_vertical_align"],
+[class^="next"], [class^="prev"],
+[class^="htheme_title_container"],
+[class*=" htheme-icon-"],
+[class^="htheme_icon_"],
+[class*=" htheme_icon_"],
+.htheme_default_select,
+.added_to_cart,
+.woocommerce-validated:after,
+.woocommerce-invalid:after,
+.htmeme_full_modern_slider .owl-next:after,
+.htmeme_full_modern_slider .owl-prev:after,
+.add_to_cart_button:before,
+.htheme_input_plus:after,
+.htheme_input_minus:after,
+.product_type_grouped:before,
+a.product_type_grouped:after,
+a.product_type_external:after,
+a.product_type_variable:after,
+a.product_type_simple:after,
+.htheme_nav_item_new > a span:before,
+.htheme_select_box_arrow:after,
+.htheme_woo_mobile_toggle:after,
+.htheme_woo_mobile_close:after,
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger:after{
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+}

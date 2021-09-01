@@ -1,0 +1,24 @@
+/********************************
+    ICONS
+*********************************/
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../titles.eot');
+    src:url('../titles.eot#iefix') format('embedded-opentype'),
+    url('../fonts/titles.ttf') format('truetype'),
+    url('../fonts/titles.woff') format('woff'),
+    url('../img/titles.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.htheme_title_devider_holder:after,
+.htheme_icon_product_video:after,
+.htheme_icon_super_zoom:after{
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+}
