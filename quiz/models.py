@@ -42,7 +42,7 @@ class Choice(TimeStampedModel):
 
 class QuizProfile(TimeStampedModel):
     user = models.OneToOneField(User, on_delete=models.CASCADE,related_name='user_quiz_1')
-    total_score = models.DecimalField(_('Total Score'), default=0, decimal_places=2, max_digits=10)
+    total_score = models.DecimalField(_('Total Score'), default=1, decimal_places=2, max_digits=10)
 
     def __str__(self):
         return f'<QuizProfile: user={self.user}>'
