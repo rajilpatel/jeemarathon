@@ -24,7 +24,7 @@ from django.conf.urls import handler404, handler500
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("home.urls",namespace='home_view')),
-    url('september/', include('quiz.urls'),namespace='quiz'),
+    url('september/', include('quiz.urls')),
     url(r'^quiz2/', include('quiz_2.urls')),
 
  
@@ -33,9 +33,7 @@ urlpatterns = [
 # from django.conf import settings
 # from django.conf.urls.static import static
 
-urlpatterns = [
-    # ... the rest of your URLconf goes here ...
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,
