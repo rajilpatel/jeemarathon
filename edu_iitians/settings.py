@@ -152,3 +152,5 @@ LOGIN_URL = '/september/'
 LOGIN_REDIRECT_URL = 'september/'
 AUTH_USER_MODEL = 'quiz.User'
 
+import mimetypes
+mimetypes.add_type("text/css", ".css", True)
