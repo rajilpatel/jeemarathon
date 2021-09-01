@@ -148,7 +148,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_URL = '/september/login/'
-LOGIN_REDIRECT_URL = 'exercise/'
+LOGIN_URL = '/september/'
+LOGIN_REDIRECT_URL = 'september/'
 AUTH_USER_MODEL = 'quiz.User'
 
