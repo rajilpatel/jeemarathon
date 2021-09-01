@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'a%-fix39(g=bf4v=i_7tca9u1x=i^n31a^r6&)+9+nfx8#h_&f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','159.65.152.215','www.jeemarathon.com','jeemarathon.com']
 
