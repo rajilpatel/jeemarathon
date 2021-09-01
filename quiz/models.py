@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.utils.translation import gettext as _
 from model_utils.models import TimeStampedModel
 from django.contrib.auth.models import AbstractUser
+from django.db.models.functions.comparison import NullIf
 
 class User(AbstractUser):
     contact_number = models.CharField(max_length=100,null=True)
@@ -83,7 +84,7 @@ class QuizProfile(TimeStampedModel):
         ).annotate(
             total_attempts=Count('attempts'),
             correct_attempts=Sum(Case(When(attempts__is_correct=True, then=1), default=0, output_field=models.IntegerField())),
-            success_rate=Cast(100.0 * F('correct_attempts') / F('total_attempts'), models.FloatField())
+            success_rate=Cast(100.0 * F('correct_attempts') / NullIf(F('total_attempts'),0), models.FloatField())
         ).order_by(
             '-total_score',
             '-correct_attempts',
